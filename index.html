@@ -33,6 +33,44 @@
 			.converter_result {
 				margin-top: 100px;
 			}
+
+			.formula4 {
+				position: relative;
+			}
+
+			.formula4_inputs {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+			}
+
+			.numerators {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.numerator {
+				display: flex;
+				width: 42%;
+				justify-content: flex-end;
+			}
+			
+			.numerator input {
+				display: flex;
+				margin-right: 30px;
+			}
+
+			.denominators {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.denominator {
+				display: flex;
+				width: 42%;
+				justify-content: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -75,10 +113,12 @@
 				<section>
 					<section data-markdown="markdown/from_general_to_canonical_1.md"></section>
 					<section data-markdown="markdown/from_general_to_canonical_2.md"></section>
+					<section data-markdown="markdown/from_general_to_canonical_3.md"></section>
 				</section>
 				<section>
 					<section data-markdown="markdown/from_general_to_parametric_1.md"></section>
 					<section data-markdown="markdown/from_general_to_parametric_2.md"></section>
+					<section data-markdown="markdown/from_general_to_parametric_3.md"></section>
 				</section>
 				<section>
 					<section data-markdown="markdown/from_canonical_to_general.md"></section>
@@ -102,15 +142,137 @@
 				<section>
 					<h3>Конвертер из общего в каноническое</h3>
 					<form action="" method="post" class="converter_form">
-							<input id="converter1_A" type="number" value="" class="converter_input">
-							<div class="formula1"></div>
-							<input id="converter1_B" type="number" value="" class="converter_input">
-							<div class="formula2"></div>
-							<input id="converter1_C" type="number" value="" class="converter_input">
-							<div class="formula3"></div>
-							<input type="submit" id="converter1_submit" class="converter_submit" value="=>">
+						<input id="converter1_A" type="number" value="" class="converter_input">
+						<div class="formula1"></div>
+						<input id="converter1_B" type="number" value="" class="converter_input">
+						<div class="formula2"></div>
+						<input id="converter1_C" type="number" value="" class="converter_input">
+						<div class="formula3"></div>
+						<input type="submit" id="converter1_submit" class="converter_submit" value="=>">
 					</form>
-					<div class="converter_result" id="converter_result"></div>
+					<div class="converter_result" id="converter1_result"></div>
+				</section>
+				<section>
+					<h3>Конвертер из общего в параметрическое</h3>
+					<form action="" method="post" class="converter_form">
+						<input id="converter2_A" type="number" value="" class="converter_input">
+						<div class="formula1"></div>
+						<input id="converter2_B" type="number" value="" class="converter_input">
+						<div class="formula2"></div>
+						<input id="converter2_C" type="number" value="" class="converter_input">
+						<div class="formula3"></div>
+						<input type="submit" id="converter2_submit" class="converter_submit" value="=>">
+					</form>
+					<div class="converter_result" id="converter2_result"></div>
+				</section>
+				<section>
+					<h3>Конвертер из канонического в общее</h3>
+					<form action="" method="post" id="converter3" class="converter_form">
+						<div class="formula4">
+							<div class="formula4_inputs">
+								<div class="numerators">
+									<div class="numerator">
+										<input id="converter3_x0" type="number" value="" class="converter_input">
+									</div>
+									<div class="numerator">
+										<input id="converter3_y0" type="number" value="" class="converter_input">
+									</div>
+								</div>
+								<div class="denominators">
+									<div class="denominator">
+										<input id="converter3_r" type="number" value="" class="converter_input">
+									</div>
+									<div class="denominator">
+										<input id="converter3_s" type="number" value="" class="converter_input">
+									</div>
+								</div>
+							</div>
+						</div>
+						<input type="submit" id="converter3_submit" class="converter_submit" value="=>">
+					</form>
+					<div class="converter_result" id="converter3_result"></div>
+				</section>
+				<section>
+					<h3>Конвертер из канонического в параметрическое</h3>
+					<form action="" method="post" id="converter4" class="converter_form">
+						<div class="formula4">
+							<div class="formula4_inputs">
+								<div class="numerators">
+									<div class="numerator">
+										<input id="converter4_x0" type="number" value="" class="converter_input">
+									</div>
+									<div class="numerator">
+										<input id="converter4_y0" type="number" value="" class="converter_input">
+									</div>
+								</div>
+								<div class="denominators">
+									<div class="denominator">
+										<input id="converter4_r" type="number" value="" class="converter_input">
+									</div>
+									<div class="denominator">
+										<input id="converter4_s" type="number" value="" class="converter_input">
+									</div>
+								</div>
+							</div>
+						</div>
+						<input type="submit" id="converter4_submit" class="converter_submit" value="=>">
+					</form>
+					<div class="converter_result" id="converter4_result"></div>
+				</section>
+				<section>
+					<h3>Конвертер из параметрического в каноническое</h3>
+					Здесь должен быть конвертер
+				</section>
+				<section>
+					<h3>Конвертер из параметрического в общее</h3>
+					Здесь должен быть конвертер
+				</section>
+				<section>
+					<h3>Генератор уравнения прямой по двум точкам</h3>
+					Здесь должен быть генератор
+				</section>
+				<section>
+					<h3>Исходный код конвертера из общего в каноническое</h3>
+					<section>
+						<img src="img/code01.png" alt="src" height="500px">
+					</section>
+					<section>
+						<img src="img/code02.png" alt="src" height="500px">
+					</section>
+				</section>
+				<section>
+					<h3>Исходный код конвертера из общего в параметрическое</h3>
+					<img src="img/code03.png" alt="src" height="500px">
+				</section>
+				<section>
+					<h3>Исходный код конвертера из канонического в общее</h3>
+					<section>
+						<img src="img/code04.png" alt="src" height="500px">
+					</section>
+					<section>
+						<img src="img/code05.png" alt="src" height="500px">
+					</section>
+				</section>
+				<section>
+					<h3>Исходный код конвертера из канонического в параметрическое</h3>
+					<img src="img/code06.png" alt="src" height="450px">
+				</section>
+				<section class="center">
+					<h2>
+						Веселые картинки
+					</h2>
+				</section>
+				<section>
+					<h3>Веселые картинки</h3>
+					<img src="img/meme01.jpg" alt="meme" height="600px">
+				</section>
+				<section>
+					<h3>Веселые картинки</h3>
+					<img src="img/meme02.jpg" alt="meme" height="500px">
+				</section>
+				<section>
+					<h3>Веселые картинки</h3>
+					<img src="img/meme03.jpg" alt="meme" height="450px">
 				</section>
 				<section class="center">
 					Спасибо за внимание!
@@ -120,12 +282,12 @@
 
     <script src="/mathlibrary/algebrite.bundle-for-browser.js"></script>
     <script src="/mathlibrary/math.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.css" integrity="sha384-yW1frltt4cd2K6QCmOMx4M+ylOmyrGb+NDouZ1f5VL2f4NN7uBu5PQsmUSgWib1W" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.js" integrity="sha384-ZfxPSr1+NHNHrv9KI48JF/1RkvdoxKWJPuYyfxE+iexlsGw8tyQR4OuNVNUuzwLN" crossorigin="anonymous"></script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<link rel="stylesheet" href="plugin/katex/lib/katex.min.css">
+		<script src="plugin/katex/lib/katex.min.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -160,50 +322,149 @@
 				return katex.renderToString(tex);
 			}
 
+			function parseGeneral(converterN) {
+				let A = parseFloat(document.querySelector("#"+converterN+"_A").value);
+				let B = parseFloat(document.querySelector("#"+converterN+"_B").value);
+				let C = parseFloat(document.querySelector("#"+converterN+"_C").value);
+				if(isNaN(A) || isNaN(B) || isNaN(C)) {
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						"Ошибка: введено не число";
+					throw new Error("Ошибка: введено не число");
+				}
+				let x0 = 0, y0 = 0, sx, sy;
+				if(A != 0) {
+					sx = Math.sign(-C/A);
+					x = Algebrite.run(Math.abs(C)+'/'+Math.abs(A));
+					y = '0';
+				}
+				else if(B != 0) {
+					sy = Math.sign(-C/B);
+					y = Algebrite.run(Math.abs(C)+'/'+Math.abs(B));
+					x = '0';
+				}
+				else {
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						"Ошибка: это не прямая";
+					throw new Error("Ошибка: это не прямая");
+				}
+				return [sx,sy,x,y,A,B];
+			}
+
+			function parseCanonical(converterN) {
+				let x0 = parseFloat(document.querySelector("#"+converterN+"_x0").value);
+				let y0 = parseFloat(document.querySelector("#"+converterN+"_y0").value);
+				let r = parseFloat(document.querySelector("#"+converterN+"_r").value);
+				let s = parseFloat(document.querySelector("#"+converterN+"_s").value);
+				if(isNaN(x0) || isNaN(y0) || isNaN(r) || isNaN(s)) {
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						"Ошибка: введено не число";
+					throw new Error("Ошибка: введено не число");
+				}
+				return [x0,y0,r,s];
+			}
+
 			window.onload = () => {
-				//console.log(parseTex("x"));
-				document.querySelector(".formula1").innerHTML = parseTex("x\\;+");
-				document.querySelector(".formula2").innerHTML = parseTex("y\\;+");
-				document.querySelector(".formula3").innerHTML = parseTex(" = 0");
+				for(let i of document.querySelectorAll(".formula1"))
+					i.innerHTML = parseTex("x\\;+");
+				for(let i of document.querySelectorAll(".formula2"))
+					i.innerHTML = parseTex("y\\;+");
+				for(let i of document.querySelectorAll(".formula3"))
+					i.innerHTML = parseTex(" = 0");
+				formula4 = '\\dfrac{x-\\qquad}{} = \\dfrac{y-\\qquad}{}';
+				for(let i of document.querySelectorAll(".formula4"))
+					i.innerHTML += parseTex(formula4);
+
 				document.querySelector("#converter1_submit").onclick = (e) => {
 					e.preventDefault();
-					let A = parseFloat(document.querySelector("#converter1_A").value);
-					let B = parseFloat(document.querySelector("#converter1_B").value);
-					let C = parseFloat(document.querySelector("#converter1_C").value);
-					//console.log(A);
-					//console.log(B);
-					//console.log(C);
-					if(isNaN(A) || isNaN(B) || isNaN(C)) {
-						console.error();
-					}
-					let x0 = 0, y0 = 0;
-					if(A != 0) {
-						x0 = +(-C/A).toFixed(2);
-					}
-					if(B != 0) {
-						y0 = +(-C/B).toFixed(2);
-					}
-					//console.log(x0);
-					//console.log(y0);
+					converterN = "converter1";
+					[sx,sy,x,y,A,B] = parseGeneral(converterN);
 					let convert_equation;
-					let x = Math.abs(x0);
-					let y = Math.abs(y0);
-					if((x0 < 0) && (y0 < 0)) {
-						convert_equation = `\\dfrac{x+${x}}{${-B}} = \\dfrac{y+${y}}{${A}}`;
+					if(sx < 0) {
+						convert_equation = `\\dfrac{x+${x}}{${-B}} = \\dfrac{y}{${A}}`;
 					}
-					else if((x0 < 0) && (y0 > 0)) {
-						convert_equation = `\\dfrac{x+${x}}{${-B}} = \\dfrac{y-${y}}{${A}}`;
+					else if(sx > 0) {
+						convert_equation = `\\dfrac{x-${x}}{${-B}} = \\dfrac{y}{${A}}`;
 					}
-					else if((x0 > 0) && (y0 < 0)) {
-						convert_equation = `\\dfrac{x-${x}}{${-B}} = \\dfrac{y+${y}}{${A}}`;
+					else if(sy < 0) {
+						convert_equation = `\\dfrac{x}{${-B}} = \\dfrac{y+${y}}{${A}}`;
 					}
 					else {
-						convert_equation = `\\dfrac{x-${x}}{${-B}} = \\dfrac{y-${y}}{${A}}`;
+						convert_equation = `\\dfrac{x}{${-B}} = \\dfrac{y-${y}}{${A}}`;
 					}
 					convert_equation = parseTex(convert_equation);
 
-					document.querySelector('#converter_result').innerHTML = convert_equation;
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						convert_equation;
 				}
+
+				document.querySelector("#converter2_submit").onclick = (e) => {
+					e.preventDefault();
+					converterN = "converter2";
+					[sx,sy,x,y,A,B] = parseGeneral(converterN);
+					let convert_equation;
+					if(sx < 0) {
+						convert_equation = `
+							\\begin{cases}
+							x = ${-B}t-${x},\\\\
+							y = ${A}t
+							\\end{cases}`;
+					}
+					else if(sx > 0) {
+						convert_equation = `
+							\\begin{cases}
+							x = ${-B}t+${x},\\\\
+							y = ${A}t
+							\\end{cases}`;
+					}
+					else if(sy < 0) {
+						convert_equation = `
+							\\begin{cases}
+							x = ${-B}t,\\\\
+							y = ${A}t-${y}
+							\\end{cases}`;
+					}
+					else {
+						convert_equation = `
+							\\begin{cases}
+							x = ${-B}t,\\\\
+							y = ${A}t+${y}
+							\\end{cases}`;
+					}
+					convert_equation = parseTex(convert_equation);
+
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						convert_equation;
+				}
+
+				document.querySelector("#converter3_submit").onclick = (e) => {
+					e.preventDefault();
+					converterN = "converter3";
+					[x0,y0,r,s] = parseCanonical(converterN);
+					let A = s;
+					let B = -r;
+					let C = -s*x0 + r*y0;
+					let convert_equation = parseTex(`${A}x
+						${Math.sign(B) < 0 ? '-' : '+'} ${Math.abs(B)}y
+						${Math.sign(C) < 0 ? '-' : '+'} ${Math.abs(C)}=0`);
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						convert_equation;
+				}
+					
+
+				document.querySelector("#converter4_submit").onclick = (e) => {
+					e.preventDefault();
+					converterN = "converter4";
+					[x0,y0,r,s] = parseCanonical(converterN);
+					let convert_equation = `
+						\\begin{cases}
+						x = ${r}t ${Math.sign(x0) < 0 ? '-' : '+'} ${Math.abs(x0)},\\\\
+						y = ${s}t ${Math.sign(y0) < 0 ? '-' : '+'} ${Math.abs(y0)}
+						\\end{cases}`;
+					convert_equation = parseTex(convert_equation)
+					document.querySelector('#'+converterN+'_result').innerHTML =
+						convert_equation;
+				}
+
 			}
 		</script>
 	</body>
